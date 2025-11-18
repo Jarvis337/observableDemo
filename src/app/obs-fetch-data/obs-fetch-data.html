@@ -1,0 +1,35 @@
+<p>obs-fetch-data works!</p>
+<div>
+  <h1>Fetch Data with Observable</h1>
+
+  <!-- Loading -->
+  <div *ngIf="loading">
+    <p>Loading...</p>
+    <button (click)="cancelFetch()">Cancel</button>
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="error && !loading">
+    <p>{{ error }}</p>
+    <button (click)="fetchData()">Retry</button>
+  </div>
+
+  <!-- Success -->
+  <div *ngIf="posts.length > 0 && !loading">
+    <h2>Posts: {{ posts.length }}</h2>
+    <button (click)="fetchData()">Refresh</button>
+
+    <div>
+      <div *ngFor="let post of posts" style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.body }}</p>
+        <small>ID: {{ post.id }}</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty -->
+  <div *ngIf="posts.length === 0 && !loading && !error">
+    <button (click)="fetchData()">Load Posts</button>
+  </div>
+</div>
