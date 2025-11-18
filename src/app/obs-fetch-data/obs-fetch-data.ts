@@ -11,7 +11,7 @@ import { SubjectsObsFetch } from '../subjects-obs-fetch';
 })
 export class ObsFetchData implements OnInit, OnDestroy{
 posts : any[] = [];
-loading= false;
+loading= true;
 error : string = '';
 private subsription : Subscription = new Subscription();
 constructor(private http: HttpClient, private subjectsObsFetch: SubjectsObsFetch){
