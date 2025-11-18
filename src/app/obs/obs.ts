@@ -26,6 +26,7 @@ export class Obs implements OnInit, OnDestroy{
       count++;
     },2000);
     return ()=>{
+      console.log("cleanup invoked");
       console.log("Cleanup");
       clearInterval(intervalId);
     }
