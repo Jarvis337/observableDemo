@@ -11,7 +11,7 @@ import { SubjectsObsFetch } from '../subjects-obs-fetch';
 })
 export class ObsFetchData implements OnInit, OnDestroy{
 posts : any[] = [];
-loading= "conflict_branch";
+loading= false;
 error : string = '';
 private subsription : Subscription = new Subscription();
 constructor(private http: HttpClient, private subjectsObsFetch: SubjectsObsFetch){
@@ -35,7 +35,7 @@ fetchData(){
   const fetchPosts$: Observable<any>=this.http.get('https://jsonplaceholder.typicode.com/posts');
   this.subsription = fetchPosts$.pipe(
     tap(data=>{
-      console.log("Data recievd from api");
+     console.log("Data recievd from api - LOCAL-CHANGE-A");
     }),
     catchError(error=>{
       this.error = 'Error fetching data';
@@ -54,7 +54,7 @@ fetchData(){
   )
 }
 cancelFetch(){
-  console.log("Cancelling fetch");
+console.log("Cancelling fetch - LOCAL-CHANGE-A");
   this.subsription.unsubscribe();
   this.loading=false;
 }
