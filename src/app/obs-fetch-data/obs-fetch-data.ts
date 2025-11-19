@@ -36,6 +36,7 @@ fetchData(){
   this.subsription = fetchPosts$.pipe(
     tap(data=>{
      console.log("Data recievd from api - LOCAL-CHANGE-A");
+     console.log("Chaitu");
     }),
     catchError(error=>{
       this.error = 'Error fetching data';
@@ -55,6 +56,7 @@ fetchData(){
 }
 cancelFetch(){
 console.log("Cancelling fetch - LOCAL-CHANGE-A");
+console.log("Shubhu");
   this.subsription.unsubscribe();
   this.loading=false;
 }
