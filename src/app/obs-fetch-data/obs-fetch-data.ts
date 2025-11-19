@@ -35,7 +35,8 @@ export class ObsFetchData implements OnInit, OnDestroy {
     const fetchPosts$: Observable<any> = this.http.get('https://jsonplaceholder.typicode.com/posts');
     this.subsription = fetchPosts$.pipe(
       tap(data => {
-        console.log("Data recievd from api");
+        console.log("Data recievd from api - FEATURE-2-CHANGE");
+        console.log("Change from feature-branch-2");
       }),
       catchError(error => {
         this.error = 'Error fetching data';
