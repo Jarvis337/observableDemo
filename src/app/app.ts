@@ -6,7 +6,7 @@ import { Obs4 } from './obs4/obs4';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Obs,ObsFetchData,Obs4],
+  imports: [RouterOutlet,Obs,ObsFetchData, Obs4],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
