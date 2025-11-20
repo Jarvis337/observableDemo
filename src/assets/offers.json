@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": "1",
+    "title": "Electronics Sale",
+    "discount": 30,
+    "category": "electronics",
+    "description": "Up to 30% off on latest gadgets",
+    "expiryDate": "2025-12-31",
+    "imageUrl": "/assets/electronics.jpeg",
+    "isActive": true
+  },
+  {
+    "id": "2",
+    "title": "Home Decor",
+    "discount": 20,
+    "category": "home",
+    "description": "Beautiful home decor items at discount",
+    "expiryDate": "2025-11-30",
+    "imageUrl": "/assets/homeDecor.jpeg",
+    "isActive": true
+  },
+  {
+    "id": "3",
+    "title": "Fashion Week",
+    "discount": 50,
+    "category": "fashion",
+    "description": "Trendy fashion collections on sale",
+    "expiryDate": "2025-12-15",
+    "imageUrl": "/assets/fashion.jpeg",
+    "isActive": true
+  }
+]

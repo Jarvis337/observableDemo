@@ -5,6 +5,7 @@ import { catchError, finalize, Observable, of, Subscription, tap } from 'rxjs';
 import { SubjectsObsFetch } from '../subjects-obs-fetch';
 @Component({
   selector: 'app-obs-fetch-data',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './obs-fetch-data.html',
   styleUrl: './obs-fetch-data.css',

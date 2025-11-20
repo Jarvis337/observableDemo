@@ -1,0 +1,29 @@
+<div class="category-container">
+  <h2>Offers by Category</h2>
+  
+  <div class="category-buttons">
+    <button (click)="onCategoryChange('electronics')" 
+            [class.active]="selectedCategory === 'electronics'">
+      Electronics
+    </button>
+    <button (click)="onCategoryChange('home')" 
+            [class.active]="selectedCategory === 'home'">
+      Home
+    </button>
+    <button (click)="onCategoryChange('fashion')" 
+            [class.active]="selectedCategory === 'fashion'">
+      Fashion
+    </button>
+  </div>
+
+  <div class="offers-grid">
+    <div class="offer-card" *ngFor="let offer of categoryOffers">
+      <img [src]="offer.imageUrl" [alt]="offer.title">
+      <h3>{{ offer.title }}</h3>
+      <p class="discount">{{ offer.discount }}% OFF</p>
+      <p>{{ offer.description }}</p>
+      <button>Shop Now</button>
+    </div>
+  </div>
+   <p *ngIf="categoryOffers.length === 0">No offers available for this category.</p>
+</div>
