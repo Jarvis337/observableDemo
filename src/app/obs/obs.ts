@@ -4,6 +4,7 @@ import { filter, interval, Observable, Subscription, map } from 'rxjs';
 @Component({
   selector: 'app-obs',
   imports: [],
+  standalone: true,
   templateUrl: './obs.html',
   styleUrl: './obs.css',
 })

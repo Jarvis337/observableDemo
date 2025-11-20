@@ -1,0 +1,20 @@
+<div class="nudge-container" *ngIf="!isLoading && activeOffers.length > 0">
+  <div class="nudge-banner" *ngFor="let offer of activeOffers">
+    <div class="nudge-content" (click)="onNudgeClick(offer)">
+      <div class="nudge-image">
+        <img [src]="offer.imageUrl" [alt]="offer.title">
+      </div>
+      <div class="nudge-details">
+        <h3>{{ offer.title }}</h3>
+        <p class="discount-badge">{{ offer.discount }}% OFF</p>
+        <p class="description">{{ offer.description }}</p>
+        <p class="expiry">Expires: {{ offer.expiryDate | date: 'short' }}</p>
+      </div>
+    </div>
+    <button class="close-btn" (click)="onDismiss(offer.id)">×</button>
+  </div>
+</div>
+
+<div class="loading" *ngIf="isLoading">
+  <p>Loading offers...</p>
+</div>
